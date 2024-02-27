@@ -1,0 +1,69 @@
+@startuml mascota
+class Mascota{
+    void jugar
+    void Defecar
+    void Comer
+}
+class Alimento
+class Salud 
+class Nombre
+class Correa 
+class Placa 
+class Casa 
+class Hueso
+class Defecar 
+class Pasear 
+class Pelota 
+class Gato 
+class Duenio
+class Medicamento
+class Perro {
+    void ladrar
+    void 
+
+}
+class Estambre
+class CajitaArena
+class Ropita
+class Pechera
+class Cojin 
+class Camita 
+Gato "1" o-- "1" Cojin
+Perro "1" o-- "1" Camita
+Casa *-- Camita
+Casa *-- Cojin
+Perro "1" o-- "3" Pechera
+Gato "1" o-- "1" CajitaArena
+Gato "1" o-- "3" Estambre
+Duenio "1" *-- "2" Perro
+Duenio "1" *-- "1" Casa
+Duenio "1" o-- "20" Alimento
+Duenio "1" o-- "1" Camita
+Duenio "1" *-- "2" Nombre
+Perro -|> Mascota
+Correa -|> Pasear
+Mascota "1" o-- "3" Pelota
+Pasear -|> Salud
+Defecar -|> Salud
+Perro "1" o-- "5" Hueso
+Mascota "1" o-- "2" Alimento
+Alimento -|> Salud 
+Mascota "0" *-- "100" Salud
+Perro "1" *--  "1" Nombre
+Gato "1" *-- "1" Nombre
+Mascota "1" o-- "1" Casa
+Mascota "1" o-- "2" Correa
+Mascota "1" *--  "1" Placa
+Placa "1" *--  "1" Nombre
+Casa "1" *-- "1" Nombre
+Hueso -|> Alimento
+Mascota -|> Gato 
+Duenio "1" o-- "10" Medicamento
+Gato "1" o--  "10" Medicamento
+Perro "1" o-- "10" Medicamento
+Medicamento -|> Salud
+Duenio "1" *--  "5" Mascota
+Mascota "1"*-- "5" Ropita
+Gato "1" o-- "2" Ropita
+Perro "1" o-- "2" Ropita
+ @enduml
