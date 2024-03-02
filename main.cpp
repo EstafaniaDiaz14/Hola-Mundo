@@ -2,9 +2,15 @@
 using namespace std;
 
 #include <Mascota.hpp>
+#include <Dibujo.hpp>
 
 int main(int argc, char const *argv[])
 {
+    Dibujo dibujo("./asets/Pepe.txt");
+    Dibujo dibujo2("./asets/Yuki.txt");
+    dibujo.Dibujar();
+    dibujo2.Dibujar();
+
     Mascota m1;
     Mascota m2;
     Mascota m3;
